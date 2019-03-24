@@ -14,6 +14,9 @@ app = Flask(__name__)
 @app.route('/')
 def main():
     return render_template('index.html')
+@app.route('/signup')
+def signup():
+    return render_template('signup.html')
 
 @app.route('/id/<person_id>')
 def api_id(person_id):
